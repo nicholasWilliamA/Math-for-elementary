@@ -6,6 +6,8 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useEffect, useState } from 'react';
 
+//saya suka lisa blekping
+
 export const AddScreen: React.FC<HomeNavigationStackScreenProps<'AddScreen'>> = ({navigation}) => {
     const [minNumber, setMinNumber] = useState<number>(1);
     const additionFormSchema = z.object({
