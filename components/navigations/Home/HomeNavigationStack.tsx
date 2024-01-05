@@ -7,6 +7,8 @@ import { MultiplicationsCalculationScreen } from './MultiplicationsScreen/Multip
 import { MultiplicationsScreen } from './MultiplicationsScreen/MultiplicationsScreen';
 import { SubstractionCalculationScreen } from './SubstractionScreen/SubstractionCalculationScreen';
 import { SubstractionScreen } from './SubstractionScreen/SubstractionScreen';
+import { DivisionCalculationScreen } from './DivisionsScreen/DivisionCalculationScreen';
+import { DivisionScreen } from './DivisionsScreen/DivisionScreen';
 
 const Stack = createNativeStackNavigator<HomeNavigationStackParams>();
 
@@ -28,6 +30,11 @@ export const HomeNavigationStack: React.FC = () => {
             <Stack.Group>
                 <Stack.Screen name="MultiplicationsScreen" component={MultiplicationsScreen} options={multiplicationsScreenOption}/>
                 <Stack.Screen name="MultiplicationsCalculationScreen" component={MultiplicationsCalculationScreen} options={multiplicationsCalculationOption}/>
+            </Stack.Group>
+            {/* Division Group */}
+            <Stack.Group>
+                <Stack.Screen name="DivisionScreen" component={DivisionScreen} options={divisionScreenOption}/>
+                <Stack.Screen name="DivisionCalculationScreen" component={DivisionCalculationScreen} options={divisionCalculationOption}/>
             </Stack.Group>
         </Stack.Navigator>
     );
@@ -84,6 +91,24 @@ const multiplicationsScreenOption: NativeStackNavigationOptions = {
 
 const multiplicationsCalculationOption: NativeStackNavigationOptions = {
     title: 'Soal Perkalian',
+    headerTitleAlign: 'center',
+    headerShadowVisible: false,
+    headerTitleStyle: {
+        color: '#333',
+    },
+};
+
+const divisionScreenOption: NativeStackNavigationOptions = {
+    title: 'Pembagian',
+    headerTitleAlign: 'center',
+    headerShadowVisible: false,
+    headerTitleStyle: {
+        color: '#333',
+    },
+};
+
+const divisionCalculationOption: NativeStackNavigationOptions = {
+    title: 'Soal Pembagian',
     headerTitleAlign: 'center',
     headerShadowVisible: false,
     headerTitleStyle: {

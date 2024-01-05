@@ -11,7 +11,7 @@ export const HomeScreen: React.FC<HomeNavigationStackScreenProps<'HomeScreen'>> 
             </View>
             <View className="mt-[30%] flex-row justify-evenly">
                 <MathematicalCard label="Perkalian" icon="cross" onPress={() => navigation.navigate('MultiplicationsScreen')}/>
-                <MathematicalCard label="Pembagian" divide={true}/>
+                <MathematicalCard label="Pembagian" divide={true} onPress={() => navigation.navigate('DivisionScreen')}/>
             </View>
         </View>
     );
