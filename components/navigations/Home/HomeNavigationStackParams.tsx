@@ -11,6 +11,8 @@ export type HomeNavigationStackParams = {
     SubstractionCalculationScreen: Calculation,
     MultiplicationsScreen: undefined,
     MultiplicationsCalculationScreen: Calculation,
+    DivisionScreen: undefined,
+    DivisionCalculationScreen: Calculation,
 }
 
 interface Calculation {
